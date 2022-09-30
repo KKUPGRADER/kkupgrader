@@ -1,0 +1,262 @@
+$xs:0;
+$sm:576px;
+$md:768px;
+$lg:992px;
+$xl:1200px;
+$xxl:1400px;
+$font:'Euclid Circular A';
+$primary:#0F4C75;
+$secondary:#3282B8;
+$light:#BBE1FA;
+$dark:#1B262C;
+$dark2:#001829;
+$danger: #fe3e63;
+$danger-hvr: #ec3053;
+$warning: #feb707;
+$warning-hvr: #fdc83a;
+$success: #02b605;
+$success-hvr: #2bd72d;
+$textColor:#132F4C;
+$LightTextColor:#132F4C;
+$white:#fbfbfb;
+$black:#262626;
+$transparent:#ffffff0d;
+$bodyText:#ffffffbf;
+$link:#45E1E1;
+$shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16),
+0 2px 8px 0 rgba(0, 0, 0, 0.12);
+$grey: #9e9e9e;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+*,
+*::before,
+*::after {
+    outline: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+$white:#fbfbfb;
+
+@mixin link {
+    position: relative;
+    opacity: 0.8;
+    cursor: pointer;
+    color: $link;
+
+    &:hover,
+    &.active {
+
+        color: $link;
+
+        opacity: 1;
+
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $link;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-in-out;
+
+    }
+
+    &:hover:after,
+    &.active:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+
+}
+
+a {
+    text-decoration: none;
+
+    &:not([class]) {
+        @include link;
+        color: $link;
+        transition: all 0.5s ease;
+    }
+
+    &:is(:hover, :focus, :active) {
+        text-decoration: none;
+    }
+}
+
+// p{
+//     color: #8a8f98;
+// }
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: #fbfbfb;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+
+}
+
+h3 {
+    font-size: 1.17em;
+
+}
+
+h4 {
+    font-size: 1em;
+
+}
+
+h5 {
+    font-size: .83em;
+
+}
+
+h6 {
+    font-size: .67em;
+
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(242, 242, 242);
+    cursor: pointer !important
+}
+
+::-webkit-scrollbar:hover {
+    background-color: rgb(242, 242, 242)
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    box-shadow: inset 0 0 0 24px rgba(0, 0, 0, .15);
+    border-radius: 24px
+}
+
+::-webkit-scrollbar-thumb:active {
+    box-shadow: inset 0 0 0 24px rgba(0, 0, 0, .30);
+    border-radius: 24px
+}
+
+::selection {
+    background: $secondary;
+    color: #fff;
+    text-shadow: none
+}

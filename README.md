@@ -1,6 +1,6 @@
 ### Hi there 👋
 # 💫 About Me:
-🔭 I’m currently working on my College website <br>👯  looking to collaborate on Open Source Projects<br>🤝  looking for help with TypeScript<br>🌱  currently learning Node JS<br>💬 Ask me about Frontend<br>
+🔭  looking to collaborate on Open Source Projects<br>🤝 currently learning Node JS<br>💬 Ask me about Web Dev<br>
 <br>
 [![](https://visitcount.itsvg.in/api?id=kkupgrader&label=Profile%20Views&color=0&icon=1&pretty=true)](https://visitcount.itsvg.in)
 # 📊 GitHub Stats:
